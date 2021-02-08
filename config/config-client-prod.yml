@@ -1,0 +1,5 @@
+data:
+  env: 'prod-env'
+  user:
+    username: 'prod-zuoyao'
+    password: 'prod-password'
