@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: 'config-server'
+
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+
+management:
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+info:
+  author.name: zuoyao@xosw.com
+  app.name: microservice
+  server.port: ${server.port}
+  application.name: ${spring.application.name}
+
+server:
+  port: 8764
+  servlet:
+    context-path: '/'
