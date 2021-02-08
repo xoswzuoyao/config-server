@@ -1,5 +1,5 @@
 data:
-  env: 'peer-env'
+  env: 'peer1-env'
   user:
     username: 'peer-zuoyao'
     password: 'peer-password'
